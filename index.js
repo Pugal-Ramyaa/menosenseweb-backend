@@ -1,5 +1,6 @@
 const express = require('express');
-const mongoose = require('mongoose'); // Import cors middleware
+const mongoose = require('mongoose');
+const cors = require('cors'); // Import cors middleware
 const doctorRoute = require('./routes/loginroute');
 const userRoute = require('./routes/userroute.js');
 const logRoute = require('./routes/logroute.js')
@@ -11,6 +12,7 @@ const app = express();
 app.use(express.json());
 
 // Enable CORS
+app.use(cors());
 
 // Connect to MongoDB
 mongoose.connect('mongodb+srv://pugalramyaa:pugal@menosense.rt7yrlq.mongodb.net/user',).then(() => {
