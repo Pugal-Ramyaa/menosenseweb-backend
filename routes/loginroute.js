@@ -1,7 +1,7 @@
 const Dr = require('../models/Drmodel');
 const express = require('express');
 const router = express.Router();
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
 router.post('/add_dr', async (req, res) => {
